@@ -62,6 +62,15 @@ nav a:hover{
   max-width: 500px;
 }
 
+.hero-text span{
+
+  color: #8b5cf6;
+
+  letter-spacing: 3px;
+
+  font-size: 0.9rem;
+}
+
 .hero-text h2{
   font-size: 4rem;
   margin-bottom: 20px;
