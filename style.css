@@ -283,11 +283,17 @@ footer a{
 
 @media(max-width:768px){
 
-  .menu-toggle{
-
-    display: block;
-
+  header{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
+
+  .hero-text h2{
+    font-size: 2.5rem;
+  }
+
+}
 
   nav{
 
