@@ -1,3 +1,5 @@
+alert("JavaScript funcionando");
+
 window.addEventListener("scroll", () => {
 
   const header = document.querySelector("header");
