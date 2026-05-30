@@ -317,4 +317,43 @@ footer a{
 
   }
 
+  }
+  .whatsapp{
+
+  position: fixed;
+
+  bottom: 20px;
+
+  right: 20px;
+
+  width: 60px;
+
+  height: 60px;
+
+  border-radius: 50%;
+
+  background: #25D366;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 1.8rem;
+
+  text-decoration: none;
+
+  color: white;
+
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+  transition: 0.3s;
+
+}
+
+.whatsapp:hover{
+
+  transform: scale(1.1);
+
 }
