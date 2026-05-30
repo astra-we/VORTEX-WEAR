@@ -1,6 +1,4 @@
-alert("JavaScript funcionando");
-
-window.addEventListener("scroll", () => {
+  window.addEventListener("scroll", () => {
 
   const header = document.querySelector("header");
 
@@ -20,11 +18,15 @@ const menuToggle = document.querySelector(".menu-toggle");
 
 const nav = document.querySelector("nav");
 
-menuToggle.addEventListener("click", () => {
+if(menuToggle && nav){
 
-  nav.classList.toggle("active");
+  menuToggle.addEventListener("click", () => {
 
-});
+    nav.classList.toggle("active");
+
+  });
+
+}
 
 const hiddenElements =
 document.querySelectorAll(".hidden");
@@ -121,11 +123,15 @@ modal.style.display="flex";
 
 });
 
+if(closeModal){
+
 closeModal.addEventListener("click",()=>{
 
 modal.style.display="none";
 
 });
+
+}
 
 window.addEventListener("click",(e)=>{
 
