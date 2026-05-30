@@ -85,3 +85,52 @@ card.style.display="none";
 });
 
 });
+const modal =
+document.querySelector(".modal");
+
+const closeModal =
+document.querySelector(".close-modal");
+
+const buyButtons =
+document.querySelectorAll(".buy-btn");
+
+const modalTitle =
+document.querySelector("#modal-title");
+
+const modalPrice =
+document.querySelector("#modal-price");
+
+buyButtons.forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+const card =
+btn.parentElement;
+
+modalTitle.textContent =
+card.querySelector("h3").textContent;
+
+modalPrice.textContent =
+card.querySelector("p").textContent;
+
+modal.style.display="flex";
+
+});
+
+});
+
+closeModal.addEventListener("click",()=>{
+
+modal.style.display="none";
+
+});
+
+window.addEventListener("click",(e)=>{
+
+if(e.target===modal){
+
+modal.style.display="none";
+
+}
+
+});
