@@ -23,6 +23,7 @@ menuToggle.addEventListener("click", () => {
   nav.classList.toggle("active");
 
 });
+
 const hiddenElements =
 document.querySelectorAll(".hidden");
 
