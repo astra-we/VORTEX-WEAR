@@ -119,6 +119,15 @@ card.querySelector("p").textContent;
 
 modal.style.display="flex";
 
+const whatsappLink =
+document.querySelector("#whatsapp-link");
+
+const producto =
+card.querySelector("h3").textContent;
+
+whatsappLink.href =
+`https://wa.me/5493760000000?text=Hola,%20quiero%20consultar%20por%20${producto}`;
+
 });
 
 });
