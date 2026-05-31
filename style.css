@@ -684,3 +684,6 @@ margin-bottom:10px;
 .stat p{
 color:#aaa;
 }
+html{
+  scroll-behavior:smooth;
+}
