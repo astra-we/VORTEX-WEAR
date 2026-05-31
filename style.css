@@ -530,3 +530,16 @@ cursor:pointer;
 float:right;
 
 }
+.descripcion{
+
+color:#bbb;
+
+font-size:0.9rem;
+
+padding:0 20px;
+
+margin-top:10px;
+
+line-height:1.5;
+
+}
