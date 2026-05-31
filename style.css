@@ -543,3 +543,53 @@ margin-top:10px;
 line-height:1.5;
 
 }
+.talles{
+
+padding:100px 8%;
+
+text-align:center;
+
+}
+
+.talles h2{
+
+font-size:2.5rem;
+
+margin-bottom:40px;
+
+}
+
+.talles table{
+
+width:100%;
+
+max-width:700px;
+
+margin:auto;
+
+border-collapse:collapse;
+
+background:#1a1a1a;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+.talles th,
+.talles td{
+
+padding:15px;
+
+border:1px solid #333;
+
+}
+
+.talles th{
+
+background:#8b5cf6;
+
+color:white;
+
+}
