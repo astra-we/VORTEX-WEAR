@@ -1,13 +1,17 @@
 const header = document.querySelector("header");
 
-// Header scroll
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.style.padding = "15px 8%";
-  } else {
-    header.style.padding = "20px 8%";
-  }
-});
+if(header){
+
+  window.addEventListener("scroll", () => {
+
+    header.style.padding =
+      window.scrollY > 50
+      ? "15px 8%"
+      : "20px 8%";
+
+  });
+
+}
 
 // Menú mobile
 const menuToggle = document.querySelector(".menu-toggle");
@@ -30,9 +34,15 @@ const hiddenElements = document.querySelectorAll(".hidden");
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
+
+    if(entry.isIntersecting){
+
       entry.target.classList.add("show");
+
+      observer.unobserve(entry.target);
+
     }
+
   });
 });
 
