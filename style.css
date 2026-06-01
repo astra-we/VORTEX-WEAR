@@ -126,22 +126,28 @@ nav a:hover{
 
 .card{
 
-  background: #1a1a1a;
+  background:#161616;
 
-  border-radius: 20px;
+  border-radius:20px;
 
-  overflow: hidden;
+  border:1px solid rgba(139,92,246,.15);
 
-  transition: 0.3s;
+  overflow:hidden;
 
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  transition:.35s;
+
+  box-shadow:0 0 20px rgba(0,0,0,.3);
 }
 
 .card:hover{
 
-  transform: translateY(-10px);
+  transform:translateY(-12px);
 
-  box-shadow: 0 0 30px rgba(139,92,246,0.3);
+  border-color:rgba(139,92,246,.5);
+
+  box-shadow:
+  0 15px 40px rgba(0,0,0,.4),
+  0 0 25px rgba(139,92,246,.25);
 }
 
 .card:hover img{
@@ -421,23 +427,7 @@ footer a{
   transform: translateY(0);
 
 }
-.hidden{
 
-  opacity: 0;
-
-  transform: translateY(40px);
-
-  transition: all 0.8s ease;
-
-}
-
-.show{
-
-  opacity: 1;
-
-  transform: translateY(0);
-
-}
 .filtros{
 
 display:flex;
