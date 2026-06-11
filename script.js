@@ -13,7 +13,6 @@ if(header){
 
 }
 
-// Menú mobile
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("nav");
 
@@ -29,7 +28,6 @@ if (menuToggle && nav) {
   });
 }
 
-// Animaciones scroll
 const hiddenElements = document.querySelectorAll(".hidden");
 
 const observer = new IntersectionObserver(entries => {
@@ -48,7 +46,6 @@ const observer = new IntersectionObserver(entries => {
 
 hiddenElements.forEach(el => observer.observe(el));
 
-// Filtros productos
 const filterButtons = document.querySelectorAll(".filtro-btn");
 const cards = document.querySelectorAll(".productos .card");
 
@@ -78,7 +75,6 @@ filterButtons.forEach(button => {
   });
 });
 
-// Modal productos
 const modal = document.querySelector(".modal");
 const closeModal = document.querySelector(".close-modal");
 const buyButtons = document.querySelectorAll(".buy-btn");
@@ -113,7 +109,6 @@ buyButtons.forEach(btn => {
 
 });
 
-// Cerrar modal botón
 if (closeModal) {
 
   closeModal.addEventListener("click", () => {
@@ -122,7 +117,6 @@ if (closeModal) {
 
 }
 
-// Cerrar modal clic afuera
 window.addEventListener("click", e => {
 
   if (e.target === modal) {
@@ -131,7 +125,6 @@ window.addEventListener("click", e => {
 
 });
 
-// Cerrar modal con ESC
 document.addEventListener("keydown", e => {
 
   if (e.key === "Escape") {
@@ -139,3 +132,72 @@ document.addEventListener("keydown", e => {
   }
 
 });
+let carrito = JSON.parse(
+localStorage.getItem("carrito")
+) || [];
+
+let contador =
+document.getElementById("contador");
+
+let lista =
+document.getElementById("lista-carrito");
+
+function actualizarCarrito(){
+
+contador.textContent =
+carrito.length;
+
+lista.innerHTML = "";
+
+for(let i = 0; i < carrito.length; i++){
+
+lista.innerHTML +=
+`<li>${carrito[i]}</li>`;
+
+}
+
+localStorage.setItem(
+"carrito",
+JSON.stringify(carrito)
+);
+
+}
+
+let botones =
+document.querySelectorAll(".buy-btn");
+
+botones.forEach(function(btn){
+
+btn.addEventListener(
+"click",
+function(){
+
+let producto =
+btn.dataset.producto;
+
+carrito.push(producto);
+
+actualizarCarrito();
+
+}
+);
+
+});
+
+document.getElementById("vaciar")
+.addEventListener(
+"click",
+function(){
+
+carrito = [];
+
+actualizarCarrito();
+
+localStorage.removeItem(
+"carrito"
+);
+
+}
+);
+
+actualizarCarrito();
