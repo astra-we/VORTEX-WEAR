@@ -142,6 +142,9 @@ document.getElementById("contador");
 let lista =
 document.getElementById("lista-carrito");
 
+let totalElemento =
+document.getElementById("total");
+
 function actualizarCarrito(){
 
 contador.textContent =
