@@ -129,7 +129,6 @@ window.addEventListener("click", e => {
 
 });
 
-});
 let carrito = JSON.parse(
 localStorage.getItem("carrito")
 ) || [];
