@@ -149,19 +149,31 @@ carrito.length;
 
 lista.innerHTML = "";
 
+let total = 0;
+
 for(let i = 0; i < carrito.length; i++){
 
-lista.innerHTML +=
-`<li>${carrito[i]}</li>`;
+lista.innerHTML += `
+<li>
+${carrito[i].nombre}
+ - $${carrito[i].precio.toLocaleString("es-AR")}
+</li>
+`;
+
+total += carrito[i].precio;
 
 }
+
+document.getElementById("total")
+.textContent =
+total.toLocaleString("es-AR");
 
 localStorage.setItem(
 "carrito",
 JSON.stringify(carrito)
 );
 
-}
+  }
 
 let botones =
 document.querySelectorAll(".buy-btn");
@@ -175,7 +187,13 @@ function(){
 let producto =
 btn.dataset.producto;
 
-carrito.push(producto);
+let precio =
+Number(btn.dataset.precio);
+
+carrito.push({
+nombre: producto,
+precio: precio
+});
 
 actualizarCarrito();
 
