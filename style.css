@@ -834,8 +834,10 @@ html{
 }
 
 .carrito{
-background:#111;
-padding:30px;
-border-radius:20px;
-margin:40px 20px;
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 30px;
+  text-align: left;
+  background: #111;
+  border-radius: 20px;
 }
