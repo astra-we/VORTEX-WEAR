@@ -832,3 +832,10 @@ header{
 html{
   scroll-padding-top:100px;
 }
+
+.carrito{
+background:#111;
+padding:30px;
+border-radius:20px;
+margin:40px 20px;
+}
