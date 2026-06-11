@@ -77,59 +77,57 @@ filterButtons.forEach(button => {
 
 const modal = document.querySelector(".modal");
 const closeModal = document.querySelector(".close-modal");
-const buyButtons = document.querySelectorAll(".buy-btn");
 
 const modalTitle = document.querySelector("#modal-title");
 const modalPrice = document.querySelector("#modal-price");
 
-buyButtons.forEach(btn => {
+const infoButtons =
+document.querySelectorAll(".info-btn");
+
+infoButtons.forEach(btn => {
 
   btn.addEventListener("click", () => {
 
     const card = btn.closest(".card");
 
     const producto =
-      card.querySelector("h3").textContent;
+    card.querySelector("h3").textContent;
 
     const precio =
-      card.querySelector("p").textContent;
+    card.querySelector("p").textContent;
 
     modalTitle.textContent = producto;
     modalPrice.textContent = precio;
 
     modal.style.display = "flex";
 
-    const whatsappLink =
-      document.querySelector("#whatsapp-link");
-
-    whatsappLink.href =
-      `https://wa.me/549375205306?text=Hola,%20quiero%20consultar%20por%20${producto}`;
+    document.querySelector(
+      "#whatsapp-link"
+    ).href =
+    `https://wa.me/549375205306?text=Hola,%20quiero%20consultar%20por%20${producto}`;
 
   });
 
 });
 
-if (closeModal) {
+if(closeModal){
 
-  closeModal.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+  closeModal.addEventListener(
+    "click",
+    () => modal.style.display = "none"
+  );
 
 }
 
 window.addEventListener("click", e => {
 
-  if (e.target === modal) {
+  if(e.target === modal){
+
     modal.style.display = "none";
+
   }
 
 });
-
-document.addEventListener("keydown", e => {
-
-  if (e.key === "Escape") {
-    modal.style.display = "none";
-  }
 
 });
 let carrito = JSON.parse(
