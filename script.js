@@ -81,8 +81,7 @@ const closeModal = document.querySelector(".close-modal");
 const modalTitle = document.querySelector("#modal-title");
 const modalPrice = document.querySelector("#modal-price");
 
-const infoButtons =
-document.querySelectorAll(".info-btn");
+const infoButtons = document.querySelectorAll(".info-btn");
 
 infoButtons.forEach(btn => {
 
@@ -91,37 +90,36 @@ infoButtons.forEach(btn => {
     const card = btn.closest(".card");
 
     const producto =
-    card.querySelector("h3").textContent;
+      card.querySelector("h3").textContent;
 
     const precio =
-    card.querySelector("p").textContent;
+      card.querySelector("p").textContent;
 
     modalTitle.textContent = producto;
     modalPrice.textContent = precio;
 
     modal.style.display = "flex";
 
-    document.querySelector(
-      "#whatsapp-link"
-    ).href =
-    `https://wa.me/549375205306?text=Hola,%20quiero%20consultar%20por%20${producto}`;
+    document.querySelector("#whatsapp-link").href =
+      `https://wa.me/549375205306?text=Hola,%20quiero%20consultar%20por%20${producto}`;
 
   });
 
 });
 
-if(closeModal){
+if (closeModal) {
 
-  closeModal.addEventListener(
-    "click",
-    () => modal.style.display = "none"
-  );
+  closeModal.addEventListener("click", () => {
+
+    modal.style.display = "none";
+
+  });
 
 }
 
 window.addEventListener("click", e => {
 
-  if(e.target === modal){
+  if (e.target === modal) {
 
     modal.style.display = "none";
 
@@ -130,92 +128,94 @@ window.addEventListener("click", e => {
 });
 
 let carrito = JSON.parse(
-localStorage.getItem("carrito")
+  localStorage.getItem("carrito")
 ) || [];
 
 let contador =
-document.getElementById("contador");
+  document.getElementById("contador");
 
 let lista =
-document.getElementById("lista-carrito");
+  document.getElementById("lista-carrito");
 
-let totalElemento =
-document.getElementById("total");
+function actualizarCarrito() {
 
-function actualizarCarrito(){
+  if (!contador || !lista) return;
 
-contador.textContent =
-carrito.length;
+  contador.textContent = carrito.length;
 
-lista.innerHTML = "";
+  lista.innerHTML = "";
 
-let total = 0;
+  let total = 0;
 
-for(let i = 0; i < carrito.length; i++){
+  carrito.forEach(item => {
 
-lista.innerHTML += `
-<li>
-${carrito[i].nombre}
- - $${carrito[i].precio.toLocaleString("es-AR")}
-</li>
-`;
+    lista.innerHTML += `
+      <li>
+        ${item.nombre}
+        - $${item.precio.toLocaleString("es-AR")}
+      </li>
+    `;
 
-total += carrito[i].precio;
+    total += item.precio;
 
-}
+  });
 
-document.getElementById("total")
-.textContent =
-total.toLocaleString("es-AR");
+  const totalElemento =
+    document.getElementById("total");
 
-localStorage.setItem(
-"carrito",
-JSON.stringify(carrito)
-);
+  if (totalElemento) {
+
+    totalElemento.textContent =
+      total.toLocaleString("es-AR");
 
   }
 
-let botones =
-document.querySelectorAll(".buy-btn");
-
-botones.forEach(function(btn){
-
-btn.addEventListener(
-"click",
-function(){
-
-let producto =
-btn.dataset.producto;
-
-let precio =
-Number(btn.dataset.precio);
-
-carrito.push({
-nombre: producto,
-precio: precio
-});
-
-actualizarCarrito();
+  localStorage.setItem(
+    "carrito",
+    JSON.stringify(carrito)
+  );
 
 }
-);
+
+const botones =
+  document.querySelectorAll(".buy-btn");
+
+botones.forEach(btn => {
+
+  btn.addEventListener("click", () => {
+
+    const producto =
+      btn.dataset.producto;
+
+    const precio =
+      Number(btn.dataset.precio);
+
+    carrito.push({
+      nombre: producto,
+      precio: precio
+    });
+
+    actualizarCarrito();
+
+  });
 
 });
 
-document.getElementById("vaciar")
-.addEventListener(
-"click",
-function(){
+const vaciar =
+  document.getElementById("vaciar");
 
-carrito = [];
+if (vaciar) {
 
-actualizarCarrito();
+  vaciar.addEventListener("click", () => {
 
-localStorage.removeItem(
-"carrito"
-);
+    carrito = [];
+
+    actualizarCarrito();
+
+    localStorage.removeItem("carrito");
+
+  });
 
 }
-);
 
 actualizarCarrito();
