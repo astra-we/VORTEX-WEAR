@@ -147,21 +147,21 @@ function actualizarCarrito() {
 
   let total = 0;
 
-  carrito.forEach(item => {
+carrito.forEach((item, i) => {
 
-    lista.innerHTML += `
-    <li>
-    ${carrito[i].nombre}
-    - $${carrito[i].precio.toLocaleString("es-AR")}
+  lista.innerHTML += `
+  <li>
+    ${item.nombre}
+    - $${item.precio.toLocaleString("es-AR")}
     <button onclick="eliminarProducto(${i})">
-    ❌
+      ❌
     </button>
-    </li>
-    `;
+  </li>
+  `;
 
-    total += item.precio;
+  total += item.precio;
 
-  });
+});
 
   const totalElemento =
     document.getElementById("total");
