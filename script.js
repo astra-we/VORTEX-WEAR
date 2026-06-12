@@ -268,3 +268,40 @@ carrito.splice(indice, 1);
 actualizarCarrito();
 
 }
+const buscador =
+document.getElementById("buscador");
+
+if(buscador){
+
+buscador.addEventListener(
+"input",
+function(){
+
+const texto =
+this.value.toLowerCase();
+
+cards.forEach(card => {
+
+const nombre =
+card.querySelector("h3")
+.textContent
+.toLowerCase();
+
+if(nombre.includes(texto)){
+
+card.style.display =
+"block";
+
+}else{
+
+card.style.display =
+"none";
+
+}
+
+});
+
+}
+);
+
+}
