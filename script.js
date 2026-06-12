@@ -260,3 +260,11 @@ window.open(
 );
 
 });
+
+function eliminarProducto(indice){
+
+carrito.splice(indice, 1);
+
+actualizarCarrito();
+
+}
