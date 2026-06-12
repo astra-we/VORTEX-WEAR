@@ -878,3 +878,39 @@ html{
   width: 100%;
   max-width: 300px;
 }
+
+.buscador{
+
+width:100%;
+
+max-width:500px;
+
+display:block;
+
+margin:0 auto 30px;
+
+padding:15px 20px;
+
+border:none;
+
+border-radius:15px;
+
+background:#1a1a1a;
+
+color:white;
+
+font-size:1rem;
+
+outline:none;
+
+border:1px solid rgba(139,92,246,.2);
+
+}
+
+.buscador:focus{
+
+border-color:#8b5cf6;
+
+box-shadow:0 0 15px rgba(139,92,246,.3);
+
+}
