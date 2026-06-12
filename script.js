@@ -219,3 +219,41 @@ if (vaciar) {
 }
 
 actualizarCarrito();
+
+document.getElementById("comprar")
+.addEventListener("click", function(){
+
+if(carrito.length === 0){
+
+alert("Tu carrito está vacío");
+
+return;
+
+}
+
+let mensaje =
+"Hola, quiero comprar:%0A%0A";
+
+carrito.forEach(producto => {
+
+mensaje +=
+`• ${producto.nombre} - $${producto.precio.toLocaleString("es-AR")}%0A`;
+
+});
+
+let total = 0;
+
+carrito.forEach(producto => {
+
+total += producto.precio;
+
+});
+
+mensaje +=
+`%0ATotal: $${total.toLocaleString("es-AR")}`;
+
+window.open(
+`https://wa.me/549375205306?text=${mensaje}`
+);
+
+});
