@@ -835,9 +835,46 @@ html{
 
 .carrito{
   max-width: 700px;
-  margin: 60px auto;
-  padding: 30px;
-  text-align: left;
+  margin: 80px auto;
+  padding: 35px;
   background: #111;
-  border-radius: 20px;
+  border-radius: 25px;
+  text-align: center;
+
+  border: 1px solid rgba(139,92,246,.2);
+
+  box-shadow:
+  0 0 30px rgba(0,0,0,.4),
+  0 0 20px rgba(139,92,246,.15);
+}
+
+.carrito h2{
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.carrito p{
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+#lista-carrito{
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+}
+
+#lista-carrito li{
+  background: #1a1a1a;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  border-left: 4px solid #8b5cf6;
+}
+
+#vaciar,
+#comprar-whatsapp{
+  margin-top: 15px;
+  width: 100%;
+  max-width: 300px;
 }
