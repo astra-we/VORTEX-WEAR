@@ -873,10 +873,17 @@ html{
 }
 
 #vaciar,
-#comprar-whatsapp{
-  margin-top: 15px;
-  width: 100%;
-  max-width: 300px;
+#comprar{
+  display:block;
+  margin:15px auto;
+  width:100%;
+  max-width:300px;
+}
+
+#total{
+  color:#8b5cf6;
+  font-weight:700;
+  font-size:1.4rem;
 }
 
 .buscador{
