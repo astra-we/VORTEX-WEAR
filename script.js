@@ -150,10 +150,13 @@ function actualizarCarrito() {
   carrito.forEach(item => {
 
     lista.innerHTML += `
-      <li>
-        ${item.nombre}
-        - $${item.precio.toLocaleString("es-AR")}
-      </li>
+    <li>
+    ${carrito[i].nombre}
+    - $${carrito[i].precio.toLocaleString("es-AR")}
+    <button onclick="eliminarProducto(${i})">
+    ❌
+    </button>
+    </li>
     `;
 
     total += item.precio;
