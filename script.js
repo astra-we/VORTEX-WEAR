@@ -101,7 +101,7 @@ infoButtons.forEach(btn => {
     modal.style.display = "flex";
 
     document.querySelector("#whatsapp-link").href =
-      `https://wa.me/549375205306?text=Hola,%20quiero%20consultar%20por%20${producto}`;
+      `https://wa.me/5493765205306?text=Hola,%20quiero%20consultar%20por%20${producto}`;
 
   });
 
@@ -253,7 +253,7 @@ mensaje +=
 `%0ATotal: $${total.toLocaleString("es-AR")}`;
 
 window.open(
-`https://wa.me/549375205306?text=${mensaje}`
+`https://wa.me/5493765205306?text=${mensaje}`
 );
 
 });
