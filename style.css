@@ -559,7 +559,6 @@ overflow:hidden;
 
 .talles th,
 .talles td{
-
 padding:15px;
 
 border:1px solid #333;
@@ -864,6 +863,15 @@ html{
   margin: 25px 0;
 }
 
+#lista-carrito button{
+  background:none;
+  border:none;
+  color:#ff4d4d;
+  font-size:1.1rem;
+  cursor:pointer;
+  margin-left:10px;
+}
+
 #lista-carrito li{
   background: #1a1a1a;
   padding: 15px;
@@ -920,4 +928,8 @@ border-color:#8b5cf6;
 
 box-shadow:0 0 15px rgba(139,92,246,.3);
 
+}
+
+.whatsapp{
+  bottom: 100px;
 }
