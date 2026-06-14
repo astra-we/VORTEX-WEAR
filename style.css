@@ -933,3 +933,21 @@ box-shadow:0 0 15px rgba(139,92,246,.3);
 .whatsapp{
   bottom: 100px;
 }
+
+.carrito-icono{
+  background:#8b5cf6;
+  color:white;
+  padding:8px 15px;
+  border-radius:20px;
+  font-weight:600;
+  cursor:pointer;
+
+  box-shadow:
+  0 0 15px rgba(139,92,246,.4);
+
+  transition:.3s;
+}
+
+.carrito-icono:hover{
+  transform:scale(1.05);
+}
