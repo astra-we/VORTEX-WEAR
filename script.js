@@ -142,7 +142,13 @@ function actualizarCarrito() {
   if (!contador || !lista) return;
 
   contador.textContent = carrito.length;
+  
+const contadorHeader =
+document.getElementById("contador-header");
 
+if(contadorHeader){
+  contadorHeader.textContent = carrito.length;
+}
   lista.innerHTML = "";
 
   let total = 0;
@@ -303,5 +309,25 @@ card.style.display =
 
 }
 );
+
+}
+
+const carritoIcono =
+document.querySelector(".carrito-icono");
+
+if(carritoIcono){
+
+  carritoIcono.addEventListener(
+    "click",
+    () => {
+
+      document
+      .querySelector(".carrito")
+      .scrollIntoView({
+        behavior:"smooth"
+      });
+
+    }
+  );
 
 }
