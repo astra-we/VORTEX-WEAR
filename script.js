@@ -331,34 +331,3 @@ if(carritoIcono){
   );
 
 }
-
-const buscador =
-document.getElementById("buscador");
-
-if(buscador){
-
-  buscador.addEventListener("input", () => {
-
-    const texto =
-    buscador.value.toLowerCase();
-
-    document
-    .querySelectorAll(".productos .card")
-    .forEach(card => {
-
-      const nombre =
-      card.querySelector("h3")
-      .textContent
-      .toLowerCase();
-
-      if(nombre.includes(texto)){
-        card.style.display = "block";
-      }else{
-        card.style.display = "none";
-      }
-
-    });
-
-  });
-
-}
