@@ -126,7 +126,8 @@ nav a:hover{
 }
 
 .card{
-
+  position:relative;
+  
   background:#161616;
 
   border-radius:20px;
