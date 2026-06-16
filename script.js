@@ -206,6 +206,8 @@ botones.forEach(btn => {
 
     actualizarCarrito();
 
+    alert("✅ Producto agregado al carrito");
+
   });
 
 });
