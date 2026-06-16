@@ -412,11 +412,12 @@ footer a{
   color: #8b5cf6;
 
 }
+
 .hidden{
 
   opacity: 1;
 
-  transform: translateY(40px);
+  transform: translateY(0);
 
   transition: all 0.8s ease;
 
@@ -463,6 +464,7 @@ font-weight:600;
 transform:scale(1.05);
 
 }
+
 .modal{
 
 display:none;
@@ -512,6 +514,7 @@ cursor:pointer;
 float:right;
 
 }
+
 .descripcion{
 
 color:#bbb;
@@ -595,6 +598,7 @@ background:#1a1a1a;
 padding:30px;
 border-radius:20px;
 }
+
 .envios-top{
 
 background:#8b5cf6;
@@ -630,8 +634,9 @@ text-align:center;
 font-size:2.5rem;
 
 margin-bottom:50px;
+}
 
-}.faq{
+.faq{
 padding:100px 8%;
 }
 
@@ -675,10 +680,10 @@ margin-bottom:10px;
 .stat p{
 color:#aaa;
 }
+
 html{
   scroll-behavior:smooth;
 }
-/* ===== PREMIUM EFFECTS ===== */
 
 .hero{
   overflow:hidden;
@@ -754,6 +759,7 @@ footer a:hover{
 
   opacity:.8;
 }
+
 .about{
 
   padding:100px 8%;
@@ -778,7 +784,6 @@ footer a:hover{
 
   line-height:1.8;
 }
-/* ===== EFECTOS PREMIUM EXTRA ===== */
 
 header{
   transition: .3s;
