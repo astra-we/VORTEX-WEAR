@@ -206,7 +206,13 @@ botones.forEach(btn => {
 
     actualizarCarrito();
 
-    alert("✅ Producto agregado al carrito");
+    const textoOriginal = btn.textContent;
+
+    btn.textContent = "✅ Agregado";
+
+    setTimeout(() => {
+      btn.textContent = textoOriginal;
+    }, 1000);
 
   });
 
