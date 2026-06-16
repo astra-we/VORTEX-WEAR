@@ -989,17 +989,11 @@ box-shadow:0 0 15px rgba(139,92,246,.3);
 }
 
 .oferta{
-  position:absolute;
-  top:30px;
-  left:50%;
-  transform:translateX(-50%);
   background:#8b5cf6;
   color:white;
-  padding:12px 20px;
-  border-radius:30px;
+  text-align:center;
+  padding:12px;
   font-weight:700;
-  z-index:5;
-  box-shadow:0 0 20px rgba(139,92,246,.4);
 }
 
 .badge{
