@@ -4,12 +4,19 @@ if(header){
 
   window.addEventListener("scroll", () => {
 
-    header.style.padding =
-      window.scrollY > 50
-      ? "15px 8%"
-      : "20px 8%";
+  if(window.scrollY > 50){
 
-  });
+    header.style.padding = "15px 8%";
+    header.style.background = "rgba(17,17,17,.95)";
+
+  }else{
+
+    header.style.padding = "20px 8%";
+    header.style.background = "#111";
+
+  }
+
+});
 
 }
 
