@@ -6,8 +6,13 @@
 
 body{
   font-family: 'Poppins', sans-serif;
-  background: #0f0f0f;
-  color: white;
+  background:
+  radial-gradient(circle at top right,
+  rgba(139,92,246,.12),
+  transparent 35%),
+  #0f0f0f;
+
+  color:white;
 }
 
 header{
@@ -140,6 +145,8 @@ nav a:hover{
   transition:.35s;
 
   box-shadow:0 0 20px rgba(0,0,0,.3);
+  
+  backdrop-filter: blur(10px);
 }
 
 .card:hover{
