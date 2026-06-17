@@ -523,6 +523,12 @@ float:right;
 
 }
 
+.cerrar-carrito{
+  cursor:pointer;
+  font-size:28px;
+  color:white;
+}
+
 .descripcion{
 
 color:#bbb;
@@ -970,6 +976,7 @@ box-shadow:0 0 15px rgba(139,92,246,.3);
   transform:scale(1.05);
   
 }
+
 .cart-icon{
 
   width:60px;
