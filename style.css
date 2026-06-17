@@ -1051,6 +1051,8 @@ right:-400px;
 
 width:350px;
 
+max-width:90%;
+
 height:100%;
 
 background:#111;
@@ -1064,6 +1066,8 @@ transition:.4s;
 overflow-y:auto;
 
 border-left:1px solid rgba(139,92,246,.3);
+
+animation:aparecer .3s ease;
 
 }
 
@@ -1087,10 +1091,18 @@ margin-bottom:25px;
 
 .cerrar-carrito{
 
-font-size:1.5rem;
+font-size:1.8rem;
 
 cursor:pointer;
 
+color:white;
+
+transition:.3s;
+
+}
+
+.cerrar-carrito:hover{
+  color:#8b5cf6;
 }
 
 .carrito-panel #lista-carrito li{
