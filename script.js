@@ -339,3 +339,35 @@ if(carritoIcono){
   );
 
 }
+
+const panel =
+document.querySelector(".carrito-panel");
+
+const cerrarCarrito =
+document.querySelector(".cerrar-carrito");
+
+if(carritoIcono){
+
+  carritoIcono.addEventListener(
+    "click",
+    () => {
+
+      panel.classList.add("active");
+
+    }
+  );
+
+}
+
+if(cerrarCarrito){
+
+  cerrarCarrito.addEventListener(
+    "click",
+    () => {
+
+      panel.classList.remove("active");
+
+    }
+  );
+
+}
